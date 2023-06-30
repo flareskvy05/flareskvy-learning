@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY_PORTOFOLIO</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: rgb(35, 36, 47);
+      }
+
+      .col-12 hr {
+        height: 5px;
+        color: rgb(131, 131, 252);
+      }
+      /* navbar */
+      nav {
+        display: flex;
+        background-color: rgb(20, 20, 20);
+        justify-content: space-around;
+        height: 50px;
+        align-items: center;
+      }
+
+      nav div.logo {
+        font-size: 1.3rem;
+        color: aqua;
+        letter-spacing: 2px;
+      }
+      nav ul {
+        padding-top: 10px;
+        display: flex;
+        list-style: none;
+        width: 60%;
+        align-content: center;
+        justify-content: space-evenly;
+      }
+
+      nav ul li a {
+        color: aqua;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: rgb(146, 162, 220);
+        text-decoration: none;
+        font-size: 1.22rem;
+      }
+      /* Hamburger menu */
+      .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .menu-toggle input {
+        position: absolute;
+        width: 40px;
+        height: 28px;
+        left: -6px;
+        top: -3px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .menu-toggle span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 3px;
+        transition: all 0.5s;
+      }
+
+      /* hamburger menu animation */
+      .menu-toggle span:nth-child(2) {
+        transform-origin: 0 0;
+      }
+      .menu-toggle span:nth-child(4) {
+        transform-origin: 0 100%;
+      }
+
+      .menu-toggle input:checked ~ span:nth-child(2) {
+        transform-origin: 0 0;
+        transform: rotate(45deg) translate(-1px, -1px);
+      }
+      .menu-toggle input:checked ~ span:nth-child(4) {
+        transform-origin: 0 100%;
+        transform: rotate(-45deg) translate(-1px, 0);
+      }
+      .menu-toggle input:checked ~ span:nth-child(3) {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      /* responsive breakpoint */
+
+      /* ukuran tablet */
+      @media screen and (max-width: 576px) {
+        .menu-toggle {
+          display: flex;
+        }
+        nav ul {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        nav ul {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="sticky-top">
+      <div class="logo">
+        <h4>Ferdy R</h4>
+      </div>
+
+      <ul>
+        <li>
+          <a href=""><b>Home</b></a>
+        </li>
+        <li>
+          <a href=""><b>Blog</b></a>
+        </li>
+        <li>
+          <a href=""><b>Contact</b></a>
+        </li>
+        <li>
+          <a href=""><b>Feedback</b></a>
+        </li>
+      </ul>
+
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Main Profile -->
+    <div class="container-fluid py-5 text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <h3>Hellow!</h3>
+            <h1 style="color: rgb(131, 161, 250)"><b>Ferdy R.</b></h1>
+            <p>
+              Cuma pelajar SMA, ga jago-jago banget, suka berpikir logis, bukan
+              di luar
+              <del>nayla</del> <ins>nalar</ins>.
+            </p>
+            <br />
+            <hr />
+            <br />
+            <p>
+              Saya sedang membuat projek portofolio sederhana. Lagi belajar
+              pemrograman biar keliatan <i>kece... ~</i>
+            </p>
+          </div>
+          <div class="offset-2 col-4">
+            <img
+              src="20230610_161310.png"
+              style="width: 300px"
+              alt="foto_biasa"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid py-5"
+      style="color: rgb(131, 161, 250); background-color: rgb(29, 29, 38)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center">Perkenalan</h1>
+            <hr />
+            <p style="color: white">
+              Perkenalkan, saya Ferdy Rahmat Kurniadi yang akan menyampaikan
+              segala hal yang ingin kutampilkan di halaman website ini.
+              Tentunya, bagaimana pengalamanku belajar pemrograman, membuat
+              projek sederhana, hingga blog yang bermanfaat untuk menambah
+              wawasan. Perlu diperhatikan bahwa portofolio ini saya kategorikan
+              semi formal sehingga melibatkan bahasa nonformal :]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 style="color: rgb(131, 161, 250)" class="text-center">
+              <b>Projek Barusan</b>
+            </h1>
+            <p class="text-center" style="color: white">
+              Ini beberapa projek yang kuselesaikan baru-baru ini,
+              <i>next</i>-nya bakalan nambah lagi...
+            </p>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid py-5">
+      <div class="d-flex justify-content-around container flex-direction-row">
+        <!-- <div class="row"> -->
+        <div class="container mb-2">
+          <div class="card" style="width: 18rem">
+            <img src="card-1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Program_Kinematika</h5>
+              <p class="card-text">
+                <b>Python ~</b> Membuat algoritma sederhana dari konsep
+                kinematika GLB/GLBB serta interpretasi grafik kuadratik
+                kinematika sederhana
+              </p>
+              <a href="#" class="btn btn-primary">Coming Soon</a>
+            </div>
+          </div>
+        </div>
+        <div class="container mb-2">
+          <div class="card" style="width: 18rem">
+            <img src="MATRIX_CAR.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Avoider_Car</h5>
+              <p class="card-text">
+                <b>Arduino ~</b> [<i>projek ekskul</i>] Merancang sebuah sistem
+                mobil pintar yang dapat menyingkir dari halang rintang lintasan.
+              </p>
+              <a href="#" class="btn btn-primary">Coming Soon</a>
+            </div>
+          </div>
+        </div>
+        <div class="container mb-2">
+          <div class="card" style="width: 18rem">
+            <img src="ar_robotics.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">N/A</h5>
+              <p class="card-text">N/A</p>
+              <a href="#" class="btn btn-primary">N/A</a>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 style="color: rgb(131, 161, 250)">Baru bisa apa aja?</h1>
+            <hr />
+            <p class="text-light">
+              Untuk saat ini belum banyak bahasa pemrograman yang saya kuasai
+              lebih dalam, saya lebih fokus untuk beberapa bahasa yang relevan
+              dan mudah untuk diikuti khususnya saya sebagai pemula murni nol
+              pengetahuan IT :]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="d-flex">
+            <a href="https://www.python.org"
+              ><img
+                src="https://www.svgrepo.com/download/376344/python.svg"
+                alt="python_icon"
+                width="240px"
+            /></a>
+
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1532/1532556.png"
+              alt="html_icon"
+              width="140px"
+              height="140px"
+              style="margin-top: 50px"
+            />
+            <img
+              src="https://static-00.iconduck.com/assets.00/file-type-css-icon-1806x2048-r5fwjl3p.png"
+              alt="css_icon"
+              width="126px"
+              height="138px"
+              style="margin-top: 50px; margin-left: 50px"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
+              alt="js_icon"
+              width="130px"
+              height="130px"
+              style="margin: 50px 0 0 50px"
+            />
+            <a href="https://getbootstrap.com"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/2560px-Bootstrap_logo.svg.png"
+                alt="bootstrap_icon"
+                width="163px"
+                height="130px"
+                style="margin: 50px 0 0 50px"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
